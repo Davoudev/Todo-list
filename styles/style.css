@@ -5,15 +5,13 @@
 }
 body {
   min-height: 100vh;
-  font-family: "Poppins";
+  font-family: "Poppins" ;
   color: #fff;
   background-image: linear-gradient(90deg, #e2c35d, #d88771);
 }
 header {
-  /* text-align: center;
-    position: relative;
-    top: 3rem; */
   font-size: 1.6rem;
+  font-weight: 900 ;
 }
 
 form,

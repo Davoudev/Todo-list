@@ -10,34 +10,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>David's Todo List</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>David's Todo List</h1>
+        </header>
 
-    <form id="todo-form">
+        <form id="todo-form">
 
-        <input type="text" class="input-todo">
-        <button class="button-todo">
-            <i class="fas fa-plus-square">
-            </i></button>
-        <div class="select">
-            <select name="todos" class="filter-todo">
-                <option value="all">all</option>
-                <option value="completed">completed</option>
-                <option value="uncompleted">uncompleted</option>
-            </select>
+            <input type="text" class="input-todo">
+            <button class="button-todo">
+                <i class="fas fa-plus-square">
+                </i></button>
+            <div class="select">
+                <select name="todos" class="filter-todo">
+                    <option value="all">all</option>
+                    <option value="completed">completed</option>
+                    <option value="uncompleted">uncompleted</option>
+                </select>
+            </div>
+        </form>
+        <div class="container-todo">
+            <ul class="list-todo">
+
+            </ul>
         </div>
-    </form>
-    <div class="container-todo">
-        <ul class="list-todo">
-
-        </ul>
     </div>
 </body>
 <script src="scripts/script.js"></script>

@@ -8,7 +8,7 @@ i'm going to create a **Todo-list** using HTML, CSS, and JavaScript 😀
 
 ## Fetures
 
-- [ ] Save information
+- [x] Save information
 - [x] Category completed
 - [x] Category uncompleted
 - [ ] Reminder

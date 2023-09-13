@@ -32,7 +32,22 @@ function addtodo(event) {
 
   listTodo.appendChild(todoDiv);
 
+  saveLocalTodos(todoInput.value);
   todoInput.value = "";
+}
+function saveLocalTodos(todo) {
+  //check for exsit data in local storage
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  // addind data
+  todos.push(todo);
+
+  // save in local storage
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
 
 function checkdelet(e) {

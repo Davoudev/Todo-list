@@ -68,7 +68,7 @@ function checkdelet(e) {
     const todo = item.parentElement;
     todo.classList.toggle("completed");
     const todoText = todo.querySelector(".todo-item").innerText;
-    saveTodoToLocalStorage(todoText, todo.classList.contains("completed"));
+    updateTodoInLocalStorage(todoText, todo.classList.contains("completed"));
   }
 }
 
@@ -106,4 +106,13 @@ function removeTodoFromLocalStorage(todoText) {
   const todos = JSON.parse(localStorage.getItem("todos")) || [];
   const updatedTodos = todos.filter((todo) => todo.text !== todoText);
   localStorage.setItem("todos", JSON.stringify(updatedTodos));
+}
+
+function updateTodoInLocalStorage(todoText, completed) {
+  const todos = JSON.parse(localStorage.getItem("todos")) || [];
+  const todoToUpdate = todos.find((todo) => todo.text === todoText);
+  if (todoToUpdate) {
+    todoToUpdate.completed = completed;
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }
 }
